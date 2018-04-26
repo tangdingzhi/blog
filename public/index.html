@@ -1,0 +1,140 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+</div>
+    <nav class="navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <img src="images/logo1.png" alt="LOGO" class="navbar-brand logo">
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="navbar-nav" id="godNav">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="#p1">新闻动态</a></li>
+                <li><a href="#p2">白皮书</a></li>
+                <li><a href="#p3">发展规划</a></li>
+                <li><a href="#p4">优势</a></li>
+                <li><a href="#p5">联系我们</a></li>
+            </ul>
+        </div>
+      </div>
+    </nav>
+
+<div class="banner">
+    <img src="images/banner.png" alt="">
+    <p>基于区块链的分布式CDN平台</p>
+    <div id="wonder"></div>
+</div>
+<div class="news" id="p1">
+    <div>
+        <p>btc123电子科大教授博士生导师加入BlockCDN</p>
+    </div>
+    <div>
+        <p>sosobtcBCDN与你相约第四届区块链国际峰会</p>
+    </div>
+    <div>
+        <p>btc123BCDN受邀参加上海区块链峰会</p>
+    </div>
+</div>
+<div class="paper" id="p2">
+    <div>
+        <p>阅读白皮书，开启科技之旅</p>
+        <p>阅读白皮书了解BlockCDN更多细节</p>
+        <div>
+            <input type="text">
+            <button>订阅</button>
+        </div>
+        <a href="javascript:;">白皮书下载</a>
+    </div>
+</div>
+<div class="timeline" id="p3">
+    <p>项目发展过程和未来规划</p>
+    <img src="images/timeline.png" alt="">
+    <ul id="p4">
+        <li><img src="images/icon_fenxiang.png" alt=""><p>让闲置设备运转起来，成为CDN供应商。PC、机顶盒、手机均可成为分享者，并获得回报</p></li>
+        <li><img src="images/icon_shipin.png" alt=""><p>视频、直播、网游等行业将大幅度降低CDN成本</p></li>
+        <li><img src="images/icon_heyue.png" alt=""><p>智能合约自动执行、区块链账本公开透明自动撮合买卖双方、把CDN价格定价权交还给市场</p></li>
+        <li><img src="images/icon_jiedian.png" alt=""><p>超级节点完成智能调度</p></li>
+        <li><img src="images/icon_quanqiu.png" alt=""><p>全球化、无限节点</p></li>
+    </ul>
+</div>
+<footer id="p5">
+    <div>
+        <img src="images/logo2.png" alt="">
+        <ul>
+            <li><img src="images/icon_Facebook.png" alt=""></li>
+            <li><img src="images/icon_twitter.png" alt=""></li>
+            <li><img src="images/icon_qq.png" alt=""></li>
+            <li><img src="images/icon_weixin.png" alt=""></li>
+        </ul>
+        <p>Copyright ©2016 BlockCDN. All Rights Reserved. Legal</p>
+    </div>
+</footer>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/Wonder.js"></script>
+<script src="js/jquery.smooth-scroll.min.js"></script>
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script>
+/**
+ * el {String} 元素id或class
+ * dotsNumber {Int} 初始化时页面上点的数量，如不传将根据绘制面积控制点的数量
+ * lineMaxLength {Int} 两点之间最大的连接线长度，默认：250
+ * dotsAlpha {Float} 点的透明度，取值范围 (0,1]，默认：0.8
+ * speed {Float} 点的移动速度，取值范围：大于0，默认：2
+ * clickWithDotsNumber {Int} 每次点击产生的点的数量，默认：5
+ */
+new Wonder({
+    el: '#wonder',
+    dotsNumber: 200,
+    lineMaxLength: 300,
+    dotsAlpha: 1,
+    speed: 0.8,
+    // clickWithDotsNumber: 1
+})
+/*
+*调用平滑js
+*/
+ $(document).ready(function() {
+
+      $('nav a').smoothScroll({
+            //缓动效果
+         easing: 'swing',
+          //滑动的速度
+          speed: 1000,
+          // "自动" 加速的系数
+          autoCoefficent: 2
+      });
+
+      // $('p.subnav a').click(function(event) {
+      //   event.preventDefault();
+      //   var link = this;
+      //   $.smoothScroll({
+      //     scrollTarget: link.hash
+      //   });
+      // });
+
+    });
+
+</script>
+
+
+</body>
+</html>
