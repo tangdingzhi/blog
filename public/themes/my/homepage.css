@@ -2,470 +2,209 @@ a{
 	text-decoration: none;
 	color: #333;
 }
+.homepage{
+	position: relative;
+}
 .homepage > div:first-child{
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-end;
 }
-.welcome{
-	width: 600px;
-}
-.blog p:first-child,
-.self p:first-child,
-.welcome p{
-	font-size: 32px;
-	font-weight: bold;
-	letter-spacing:8px;
-	text-align: center;
-	color: #333;
-	margin: 40px 0px 20px;
-}
-.welcome div{
-	position: relative;
-	width: 580px;
-	height: 360px;
-	border-radius: 4px;
-}
-.welcome div img{
-	display: inline-block;
-	position: absolute;
-	width: 580px;
-	height: 360px;
-	opacity: 1;
-	transition: opacity 2s;
-	z-index: 9;
-	border-radius: 4px;
-}
-.welcome div img:hover{
-	opacity: 0;
-}
-.welcome div .welcomePic1{
-	z-index: 8;
-}	
-.person{
-	height: 354px;
-	margin:0 0 0 60px;
-	padding: 20px;
-	text-align: left;	
-	background: #eee ;
-	border-radius: 6px;
-}
-.touxiang{
-	width: 140px;
-	height: 140px;
-	margin: 0px auto 10px;
-	border-radius: 50%;
-	background: #fff url("http://img.duoziwang.com/2017/09/1601490836785.jpg") -64px -94px  no-repeat;
-}
-.person p{
-	font-style:16px;
-	margin: 6px 0;
-	color: #333;
-}
-.person p span{
-	color: #ff3333;
-}
+
+
 /*---------------*/
-/***** self *****/
+/***** boFour *****/
 /*---------------*/
-.self,.blog{
-	margin-bottom: 100px;
-	margin-top: 80px;
-	width: 100%;
-}
-.self > p,.blog > p{
-	margin:40px 0 20px;
-}
-.self ul {
-	width: 1200px;
+#boFour{
+	margin-top: 40px;
+	width: 770px;
+	height: 330px;
 	display: flex;
-	justify-content: space-between;
+	flex-direction:column;
 	flex-wrap: wrap;
+	justify-content: flex-start;
+	border: 2px solid #F790B9;
+	padding:6px; 
 }
-.self ul li{
-	width: 50%;
-	height: auto;
+#boFour li{
+	width: 240px;
+	height: 160px;
+	position: relative;
+	overflow: hidden;
 }
-.self ul li a{
+#boFour li span{
+	color: #eee;
+	position: absolute;
+	top: 70%;
+	left: 10%;
+	padding-right: 6%;
+	z-index: -1;
+}
+#boFour li a{
 	display: inline-block;
 	width: 100%;
 	height: 100%;
+	z-index: 9;
 }
-.self ul li img{
+#boFour img{
+	position: absolute;
+	z-index: -10;
 	width: 100%;
-	height: auto;
-	border-radius: 4px;
-	transition: transform 1s;
+	height: 100%;
+	transition: all 0.8s;  
+}
+#boFour a:hover img{
+	 transform: scale(1.4);  
+}
+#boFour li:first-child{
+	width: 520px;
+	height: 330px;	
+	margin-right: 10px;
+}
+#boFour li:nth-child(2){
+	margin-bottom: 10px;
 }
 /*---------------*/
 /***** blog *****/
 /*---------------*/
-.blog ul{
-	width: 80%;
-	margin:0 auto;
-	padding: 20px;
-	border-radius: 6px;
+
+#blog{
+	max-width: 730px;
+	margin-top: 40px;
+	position: relative;
+	/*display: flex;*/
+	/*flex-direction: column;*/
 }
-.blog ul li{
+#blog li{
+	position: relative;
+	width: 100%;
 	margin-top: 12px;
 	display: flex;
-	justify-content: space-between;
-	align-items: center;
+	border-bottom: 1px solid #aaa;
+	padding: 20px;
+	transition: all 0.5s;  
 }
-.blog ul li a{
-	display: inline-block;
-	font-size: 18px;
-	padding-left: 10px;
-	height: 28px;
-	border-bottom:1px solid #aaa;
-	border-left:10px solid #eee;
-	width: 580px; 
+#blog li .imgBox{
+	position: relative;
+	width: 220px;
+	height: 160px;
+	z-index: 9;
+	overflow: hidden;
+	margin-right: 20px;
 }
-.blog ul li a:hover{
-	border-color: #FF8888;
-	color:#FF8888;
+#blog li img{
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	transition: all 0.8s;  
 }
-.blog ul li span{
+#blog li .imgBox:hover img{
+	 transform: scale(1.4);  
+}
+#blog .blog_msg{
+	width: 520px;
+}
+#blog .blog_msg p{
+	font-size: 16px;
+	line-height: 36px;
+}
+#blog .blog_msg span{
 	font-size: 14px;
 	color: #666;
+	line-height: 24px;
 }
-
-
-
-
-/*---------------*/
-/***** Lily *****/
-/*---------------*/
-
-.grid {
-	overflow: hidden;
-	margin: 0;
-	list-style: none;
-	text-align: center;
+#blog .blog_msg div{
+	height: 36px;
 }
-
-/* Common style */
-.grid figure {
-	position: relative;
-	z-index: 1;
-	overflow: hidden;
-	margin: -0.135em;
-	text-align: center;
-	cursor: pointer;
-}
-
-.grid figure img {
-	position: relative;
-	display: block;
-	min-height: 100%;
-	opacity: 0.8;
-}
-
-.grid figure figcaption {
-	/*padding: 2em;*/
-	color: #fff;
-	text-transform: uppercase;
-	font-size: 1.25em;	
-	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;
-}
-
-.grid figure figcaption::before,
-.grid figure figcaption::after {
-	pointer-events: none;
-}
-
-.grid figure figcaption,
-.grid figure a {
+#blog li a{
 	position: absolute;
-	top: 0;
-	left: 0;
+	top: 0px;
+	left: 0px;
 	width: 100%;
 	height: 100%;
 }
-
-/* Anchor will cover the whole item by default */
-/* For some effects it will show as a button */
-.grid figure a {
-	z-index: 1000;
-	text-indent: 200%;
-	white-space: nowrap;
-	font-size: 0;
-	opacity: 0;
+#blog li:hover{
+	background: #fff;
 }
-
-.grid figure h2 {
-	word-spacing: -0.15em;
-	font-size: 22px;
-	font-weight: 300;
-}
-
-.grid figure h2 span {
-	font-weight: 800;
-}
-
-.grid figure h2,
-.grid figure p {
-	margin: 0;
-}
-
-.grid figure p {
-	letter-spacing: 1px;
-	font-size: 68.5%;
-}
-figure.effect-sadie figcaption::before {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: -webkit-linear-gradient(top, rgba(72,76,97,0) 0%, rgba(72,76,97,0.8) 75%);
-	background: linear-gradient(to bottom, rgba(72,76,97,0) 0%, rgba(72,76,97,0.8) 75%);
-	content: '';
-	opacity: 0;
-	-webkit-transform: translate3d(0,50%,0);
-	transform: translate3d(0,50%,0);
-}
-
-figure.effect-sadie h2 {
-	position: absolute;
-	top: 66%;
-	left: 0;
-	width: 100%;
-	color: transparent;
-	-webkit-transition: -webkit-transform 0.35s, color 0.35s;
-	transition: transform 0.35s, color 0.35s;
-	-webkit-transform: translate3d(0,-50%,0);
-	transform: translate3d(0,-50%,0);
-}
-
-figure.effect-sadie figcaption::before,
-figure.effect-sadie p {
-	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-	transition: opacity 0.35s, transform 0.35s;
-}
-
-figure.effect-sadie p {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	padding: 2em;
-	width: 100%;
-	opacity: 0;
-	-webkit-transform: translate3d(0,10px,0);
-	transform: translate3d(0,10px,0);
-}
-
-figure.effect-sadie:hover h2 {
-	color: #fff;
-	-webkit-transform: translate3d(0,-50%,0) translate3d(0,-40px,0);
-	transform: translate3d(0,-50%,0) translate3d(0,-40px,0);
-}
-
-figure.effect-sadie:hover figcaption::before ,
-figure.effect-sadie:hover p {
-	opacity: 1;
-	-webkit-transform: translate3d(0,0,0);
-	transform: translate3d(0,0,0);
-}
-
-/*---------------*/
-/***** Oscar *****/
-/*---------------*/
-
-figure.effect-oscar {
-	background: -webkit-linear-gradient(45deg, #22682a 0%, #9b4a1b 40%, #3a342a 100%);
-	background: linear-gradient(45deg, #22682a 0%,#9b4a1b 40%,#3a342a 100%);
-}
-
-figure.effect-oscar img {
-	opacity: 0.9;
-	-webkit-transition: opacity 0.35s;
-	transition: opacity 0.35s;
-}
-
-figure.effect-oscar figcaption {
-	/*padding: 3em;*/
-	background-color: rgba(58,52,42,0.7);
-	-webkit-transition: background-color 0.35s;
-	transition: background-color 0.35s;
-}
-
-figure.effect-oscar figcaption::before {
-	position: absolute;
-	top: 30px;
-	right: 30px;
-	bottom: 30px;
-	left: 30px;
-	border: 1px solid #fff;
-	content: '';
-}
-
-figure.effect-oscar h2 {
-	margin: 28% 0 10px 0;
-	-webkit-transition: -webkit-transform 0.35s;
-	transition: transform 0.35s;
-	-webkit-transform: translate3d(0,100%,0);
-	transform: translate3d(0,100%,0);
-}
-
-figure.effect-oscar figcaption::before,
-figure.effect-oscar p {
-	opacity: 0;
-	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-	transition: opacity 0.35s, transform 0.35s;
-	-webkit-transform: scale(0);
-	transform: scale(0);
-}
-
-figure.effect-oscar:hover h2 {
-	-webkit-transform: translate3d(0,0,0);
-	transform: translate3d(0,0,0);
-}
-
-figure.effect-oscar:hover figcaption::before,
-figure.effect-oscar:hover p {
-	opacity: 1;
-	-webkit-transform: scale(1);
-	transform: scale(1);
-}
-
-figure.effect-oscar:hover figcaption {
-	background-color: rgba(58,52,42,0);
-}
-
-figure.effect-oscar:hover img {
-	opacity: 0.4;
-}
-/*---------------*/
-/***** Chico *****/
-/*---------------*/
-
-figure.effect-chico img {
-	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-	transition: opacity 0.35s, transform 0.35s;
-	-webkit-transform: scale(1.12);
-	transform: scale(1.12);
-}
-
-figure.effect-chico:hover img {
-	opacity: 0.5;
-	-webkit-transform: scale(1);
-	transform: scale(1);
-}
-
-/*figure.effect-chico figcaption {
-	padding: 3em;
+/*#blog  li > div{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}*/
+/*#blog  ul li a:hover{
+	border-color: #F790B9;
+	color:#F790B9;
 }*/
 
-figure.effect-chico figcaption::before {
-	position: absolute;
-	top: 30px;
-	right: 30px;
-	bottom: 30px;
-	left: 30px;
-	border: 1px solid #fff;
-	content: '';
-	-webkit-transform: scale(1.1);
-	transform: scale(1.1);
-}
 
-figure.effect-chico figcaption::before,
-figure.effect-chico p {
-	opacity: 0;
-	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-	transition: opacity 0.35s, transform 0.35s;
-}
+/*
+	时钟
+*/
 
-figure.effect-chico h2 {
-	padding: 30% 0 20px 0;
+#canvas{
+position: absolute;
+width: 380px;
+height: 180px;
+top: 0px;
+left: 820px;
+background-color : #fff;
+border-radius: 10px;
+background-repeat: no-repeat;
+background-image: url(http://www.chabudai.org/temp/wonderfl/honehone/img/tenten.gif);
 }
-
-figure.effect-chico p {
-	margin: 0 auto;
-	max-width: 200px;
-	-webkit-transform: scale(1.5);
-	transform: scale(1.5);
+#hour1{
+position: absolute;
+width: 180px;
+height: 100px;
+top: 30px;
+left: 20px;
+background-repeat: no-repeat;
+background-image: url(http://www.chabudai.org/temp/wonderfl/honehone/img/honehone1.gif);
 }
-
-figure.effect-chico:hover figcaption::before,
-figure.effect-chico:hover p {
-	opacity: 1;
-	-webkit-transform: scale(1);
-	transform: scale(1);
+#hour2{
+position: absolute;
+width: 80px;
+height: 100px;
+top: 30px;
+left: 60px;
+background-repeat: no-repeat;
+background-image: url(http://www.chabudai.org/temp/wonderfl/honehone/img/honehone1.gif);
 }
-/*---------------*/
-/***** Bubba *****/
-/*---------------*/
-
-figure.effect-bubba {
-	background: #9e5406;
+#minute1{
+position: absolute;
+width: 80px;
+height: 100px;
+top: 30px;
+left: 120px;
+background-repeat: no-repeat;
+background-image: url(http://www.chabudai.org/temp/wonderfl/honehone/img/honehone1.gif);
 }
-
-figure.effect-bubba img {
-	opacity: 0.7;
-	-webkit-transition: opacity 0.35s;
-	transition: opacity 0.35s;
+#minute2{
+position: absolute;
+width: 80px;
+height: 100px;
+top: 30px;
+left: 160px;
+background-repeat: no-repeat;
+background-image: url(http://www.chabudai.org/temp/wonderfl/honehone/img/honehone1.gif);
 }
-
-figure.effect-bubba:hover img {
-	opacity: 0.4;
+#second1{
+position: absolute;
+width: 80px;
+height: 100px;
+top: 30px;
+left: 220px;
+background-repeat: no-repeat;
+background-image: url(http://www.chabudai.org/temp/wonderfl/honehone/img/honehone1.gif);
 }
-
-figure.effect-bubba figcaption::before,
-figure.effect-bubba figcaption::after {
-	position: absolute;
-	top: 30px;
-	right: 30px;
-	bottom: 30px;
-	left: 30px;
-	content: '';
-	opacity: 0;
-	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-	transition: opacity 0.35s, transform 0.35s;
-}
-
-figure.effect-bubba figcaption::before {
-	border-top: 1px solid #fff;
-	border-bottom: 1px solid #fff;
-	-webkit-transform: scale(0,1);
-	transform: scale(0,1);
-}
-
-figure.effect-bubba figcaption::after {
-	border-right: 1px solid #fff;
-	border-left: 1px solid #fff;
-	-webkit-transform: scale(1,0);
-	transform: scale(1,0);
-}
-
-figure.effect-bubba h2 {
-	padding-top: 30%;
-	-webkit-transition: -webkit-transform 0.35s;
-	transition: transform 0.35s;
-	-webkit-transform: translate3d(0,-20px,0);
-	transform: translate3d(0,-20px,0);
-}
-
-figure.effect-bubba p {
-	padding: 20px 2.5em;
-	opacity: 0;
-	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-	transition: opacity 0.35s, transform 0.35s;
-	-webkit-transform: translate3d(0,20px,0);
-	transform: translate3d(0,20px,0);
-}
-
-figure.effect-bubba:hover figcaption::before,
-figure.effect-bubba:hover figcaption::after {
-	opacity: 1;
-	-webkit-transform: scale(1);
-	transform: scale(1);
-}
-
-figure.effect-bubba:hover h2,
-figure.effect-bubba:hover p {
-	opacity: 1;
-	-webkit-transform: translate3d(0,0,0);
-	transform: translate3d(0,0,0);
+#second2{
+position: absolute;
+width: 80px;
+height: 100px;
+top: 30px;
+left: 260px;
+background-repeat: no-repeat;
+background-image: url(http://www.chabudai.org/temp/wonderfl/honehone/img/honehone1.gif);
 }

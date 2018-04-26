@@ -1,0 +1,64 @@
+<div>
+	<h1>新增电影</h1>
+	<table cellpadding="5">
+	<tr>
+		<td>中文名称</td>
+		<td><input id="cName" type="text" /></td>
+	</tr>
+	<tr>
+		<td>英文名称</td>
+		<td><input id="eName" type="text" /></td>
+	</tr>
+	<tr>
+		<td>影片类型</td>
+		<td><input id="type" type="text" /></td>
+	</tr>
+	<tr>
+		<td>制片国家/地区</td>
+		<td><input id="country" type="text" /></td>
+	</tr>
+	<!-- _id: Object.Id, //主键
+    cName: "string", //中文名称
+    eName: "string", //英文名称
+    type: "string", //影片类型
+    country: "string", //制片国家/地区
+    duration: "string", //片长, 单位 分钟
+    release: "string", //上映时间 格式: 2016-08-23
+    synopsis: "string", //剧情简介
+    director: [], //导演, 关联演员_id 
+    actors: [], //演员, 关联演员_id 
+    imgs: [], //相关图片, 关联电影图片_id,
+    stata: string //电影状态 0: 下映, 1: 上映, 2: 热映 -->
+	<tr>
+		<td>片长</td>
+		<td><input id="duration" type="text" /></td>
+	</tr>
+	<tr>
+		<td>导演</td>
+		<td><input id="director" type="text" /></td>
+	</tr>
+	<tr>
+		<td>主演</td>
+		<td><input id="actors" type="text" /></td>
+	</tr>
+	<tr>
+		<td>上映时间</td>
+		<td><input id="release" type="text" /></td>
+	</tr>
+	<tr>
+		<td>剧情简介</td>
+		<td><input id="synopsis" type="text" /></td>
+	</tr>
+	<tr>
+		<td>上传图片</td>
+		<td><a id="addImgBtn" href="#">上传</a></td>
+	</tr>
+	<tr>
+		<td>操作</td>
+		<td>
+			<a id="saveBtn" href="#">保存</a>
+			<a id="resetBtn" href="#">重置</a>
+		</td>
+	</tr>
+</table>
+</div>

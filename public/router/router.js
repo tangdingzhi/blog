@@ -10,6 +10,15 @@ define((require, exports) => {
             "/blog/:blogId": (blogId) => {
                 require("blog").load(blogId)
             },
+            // "/info": () => {
+            //     require("info").load()
+            // },
+            // "/info/addFruits/addFruits": () => {
+            //     require("info").load(require("addFruits").load)
+            // },
+            // "/info/fruitsList/fruitsList": () => {
+            //     require("info").load(require("fruitsList").load)
+            // },
             //  "/login": () => {
             //     require("login").load()
             // },
