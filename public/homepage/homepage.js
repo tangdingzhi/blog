@@ -8,11 +8,15 @@ define((require,exports)=>{
 				console.log(e.currentTarget.id)
 				toBlog(e.target)
 				location.hash="/blog/"+$(e.target).attr("id")
-			})
+			});
 			$("#boFour").on("click","a",function(e){
 				console.log(e.target)
 				location.hash="/blog/"+$(e.target).attr("id")
-			})
+			});
+			$("#blog").on("click","a",function(e){
+				console.log(e.target)
+				location.hash="/blog/"+$(e.target).attr("id")
+			});
 		});
 		function toBlog(id){
 			location.hash="/blog/"+$(id).attr("id")
@@ -45,7 +49,7 @@ define((require,exports)=>{
 	  					jsonImg = doc.getElementsByTagName("img")[0].attributes.src.nodeValue;
 	  					var num = RandomNum(90,138);
                    		blog.innerHTML += `<li class="title">
-               									<a href="javascript:;" id="${data.rows[i]._id}"></a>
+               									<a href="javascript:;" id="${data.rows[i]._id}" ></a>
                									<div class="imgBox"><img src="${jsonImg}" alt=""></div>
            										<div class="blog_msg">
 													<p>${data.rows[i].title}</p>

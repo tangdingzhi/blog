@@ -1,6 +1,7 @@
 .blogBox{
 	width: 1200px;
 	margin: 0 auto;
+	padding-top: 32px;
 	margin-bottom: 100px;
 	display: -webkit-flex;
 	display: -moz-flex;
@@ -8,6 +9,8 @@
 	display: -o-flex;
 	display: flex;
 	justify-content: space-around;
+	border-top: 1px solid #999;
+	border-bottom: 1px solid #999;
 }
 .leftBox{
 	width: 700px;
@@ -56,4 +59,7 @@
 #rightBox li:hover a{
 	font-weight: bold;
 	border-left: 6px solid #FF8888;
+}
+.blogBox #content p{
+	background-color: transparent !important;
 }

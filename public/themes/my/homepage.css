@@ -126,17 +126,17 @@ a{
 	height: 100%;
 }
 #blog li:hover{
-	background: #fff;
+	color: #F790B9;
 }
 /*#blog  li > div{
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 }*/
-/*#blog  ul li a:hover{
+#blog  ul li a:hover{
 	border-color: #F790B9;
 	color:#F790B9;
-}*/
+}
 
 
 /*
